@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  tasks:
+
+
+          - name: update repo index
+            yum:
+                    name: "*"
+                    update_cache: yes
+
+          - name: install updates
+            yum:
+                    name: '*'
+                    state: latest
